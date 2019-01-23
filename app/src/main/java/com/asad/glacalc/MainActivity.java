@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     EditText etOne, etTwo;
-    Button btnCalc1, btnCalc2;
+    Button btnCalc1, btnCalc2, btnCalc3,btnCalc4,btnCalc5;
 
 
     @Override
@@ -46,6 +46,41 @@ public class MainActivity extends AppCompatActivity {
                 Integer b = Integer.parseInt(etTwo.getText().toString().trim());
                 Toast.makeText(MainActivity.this,  a-b +"", Toast.LENGTH_SHORT).show();
 
+            }
+        });
+        btnCalc3 = findViewById(R.id.btn_mul);
+        btnCalc3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String s = etOne.getText().toString();
+                Integer a = Integer.parseInt(etOne.getText().toString().trim());
+                Integer b = Integer.parseInt(etTwo.getText().toString().trim());
+
+                Toast.makeText(MainActivity.this, a*b +"", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        btnCalc4 = findViewById(R.id.btn_div);
+        btnCalc4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = etOne.getText().toString();
+                Integer a = Integer.parseInt(etOne.getText().toString().trim());
+                Integer b = Integer.parseInt(etTwo.getText().toString().trim());
+
+                Toast.makeText(MainActivity.this, a/b +"", Toast.LENGTH_SHORT).show();
+            }
+        });
+        btnCalc5 = findViewById(R.id.btn_mod);
+        btnCalc5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = etOne.getText().toString();
+                Integer a = Integer.parseInt(etOne.getText().toString().trim());
+                Integer b = Integer.parseInt(etTwo.getText().toString().trim());
+
+                Toast.makeText(MainActivity.this, a%b +"", Toast.LENGTH_SHORT).show();
             }
         });
 
